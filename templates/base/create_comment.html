@@ -1,0 +1,33 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mx-auto py-10">
+        <div class="bg-gray rounded-lg shadow p-6 ">
+            <h1 class="text-2xl font-semibold mb-4 inline-block">Reviews</h1>
+            <a href="{% url 'comments_list' %}" class="bg-blue-500 ml-[70%] text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">View your comments</a>
+            {% for comment in comments %}
+                <div class="bg-gray-50 p-4 rounded-lg shadow mb-4">
+                    <div class="flex items-center mb-2">
+                        <h2 class="text-lg font-semibold ml-4">{{ comment.user.first_name }}</h2> 
+                    </div> 
+                    <div>
+                        <p class="text-gray-600">Posted on {{ comment.created }}</p>
+                    </div>
+                    <p class="text-gray-700">{{ comment.text }}</p>
+                </div>
+            {% endfor %}
+            <div class="mt-6">
+                <h2 class="text-xl font-semibold mb-2">Leave a Comment</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold">Comment</label>
+                        <textarea name="comment_text" rows="4" class="w-full p-2 border rounded" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+       

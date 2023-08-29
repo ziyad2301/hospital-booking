@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Reviews</title>
+    </head>
+    <style>
+        html{
+        scroll-behavior: smooth;
+        width: 100%;
+        }
+   
+        body 
+        {
+            background-image: linear-gradient(rgba(163, 39, 39, 0.941), rgba(0, 0, 0, 0.24));
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <body>
+        <!-- navigation -->
+        <nav class="text-white text-white flex justify-between items-center py-4 px-5">
+            <h1 class=" ml-[5%] text-xl font-bold">Metro Hospital</h1>
+         
+            <ul class="flex space-x-10 text-white">
+                {% if user.is_authenticated %}
+                <li> 
+                    <a href ="{% url 'home' %}">Home</a>       
+                </li>
+                <li> 
+                    <a href ="{% url 'about' %}">About Us</a>       
+                </li>
+                <li> 
+                    <a href ="{% url 'booking' %}">Booking</a>       
+                </li>
+                <li> 
+                    <a href ="{% url 'doctor' %}">Doctors</a>       
+                </li>
+                <li> 
+                    <a href ="{% url 'department' %}">Departments</a>       
+                </li>
+                <li> 
+                    <a href ="{% url 'contact' %}">Contact Us</a>       
+                </li>
+                <li>Hello, {{user.first_name}}<li>
+                <li> 
+                    <a href ="{% url 'logout' %}">Logout</a>       
+                </li>
+                {% else %}
+                <li> 
+                    <a href ="{% url 'register' %}">Register</a>       
+                </li>
+                <li> 
+                    <a href ="{% url 'login' %}">Login</a>       
+                </li>
+                {% endif %}
+            </ul>   
+        </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

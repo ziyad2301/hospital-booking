@@ -1,0 +1,21 @@
+.input {
+    width: 70%;
+    margin-bottom: 12px;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    border-radius: 12px;
+    position: relative;
+    left: 60px;  
+    background-color: rgba(163, 39, 39, 0.941);
+    color: white;
+  }
+  .rgstr{
+    padding: 5px 5px;
+    color:white;
+    background-color: #0c0c0c;
+    border-radius: 5px;
+    position: relative;
+    left: 160px;
+  }

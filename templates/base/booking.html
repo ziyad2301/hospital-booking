@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    Booking 
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bookings.css' %}" />
+
+
+<h1 class="text-center">Make an Appointment</h1>    
+<hr>
+<div class="container w-55 text-center my-5 me-5">
+    <form action="" method='POST' class="input">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>  
+</div>  
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    About Us 
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<div class="heading">
+    <h1 class="text-center my-2">About Us</h1> 
+    <hr>   
+</div>
+<div class="container">
+    <section class="about">
+        <div class="about-image">
+            <img src="staticfiles\images\hospital.jpg">
+        </div>
+        <div class="about-content">
+            <h2>Metro Hospital</h2>
+            <p>The hospital had a very humble beginning in 1990. Krishnarajapuram was a tiny village with barely any facility to address the health needs, of the local community. It was with this in mind that the People of Bengaluru started this hospital.
+                <br>
+                It is also a recognized research centre. The hospital is conveniently located with easy access by road, rail and air. Bengaluru Railway Station is only 2 kms away. Krishnarajapuram is the meeting point of National Highway 47 and the Main Central Road.
+                <br>
+                <h5>OUR VISION</h5>
+                “A journey toward excellence providing comprehensive health care with compassion”
+                <br><br>
+                <h5>OUR MISSION</h5>
+                “Develop a health care service at an affordable cost and facilitate professional excellence to the health care providers to achieve the integral health vision of the nation”
+            </p>
+        </div>
+    </section>
+</div>
+{% endblock %}

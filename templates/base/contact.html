@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<div class="container">
+    <h1>Connect With Us </h1>
+    <p>We would love to respond to your queries. Feel free to get in touch with us.</p>
+    <div class="contact-box">
+        <div class="contact-left">
+            <h3>Send your Request</h3>
+            <form>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Name </label>
+                        <input type="text" placeholder="Enter your Full Name">
+                    </div>
+                    <div class="input-group">
+                        <label> Number </label>
+                        <input type="text" placeholder="Enter your Phone Number">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Email-id </label>
+                        <input type="text" placeholder="Enter your Email-id">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject </label>
+                        <input type="text" placeholder="Enter your Issue">
+                    </div>
+
+                </div>
+                <label> Message </label>
+                <textarea  rows="5" placeholder="Enter your Message"></textarea>
+                <button type="submit">SEND</button>
+            </form>
+
+        </div>
+        <div class="contact-right">
+            <h3>Reach Us</h3>
+
+            <table>
+                <tr>
+                    <td>Email id </td>
+                    <td>metrohospitals@gmail.com </td>
+                </tr>
+                <tr>
+                    <td>Mobile Number </td>
+                    <td>+91 0123456789 </td>
+                </tr>
+                <tr>
+                    <td> Address</td>
+                    <td>Metro Hospital,<br> Krishnarajapuram Road, <br> Bengaluru 560016 </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

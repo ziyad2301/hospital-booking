@@ -1,0 +1,32 @@
+.navbar{
+    background-color: rgba(163, 39, 39, 0.941);
+}
+li:hover{
+    background-color: gray;
+    border-radius: 20px;
+    border: 1px yellow;
+}
+footer{
+    background-color: rgba(163, 39, 39, 0.941);
+}
+h3{
+    display: flex;
+    display: inline;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+h6{
+    color: white;
+    display: flex;
+    align-items: last baseline;
+
+}
+.nav-itemend{
+    position: absolute;
+    right: 50px;
+    top: 22px;
+    display: flex;
+    align-items: last baseline;
+    gap: 5px;
+}
