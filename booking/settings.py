@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'booking.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':  'hospital booking',
         'USER': 'postgres',
         'PASSWORD': 'jasmine789',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': ''
     }
 }
 # Password validation
@@ -123,6 +123,9 @@ USE_TZ = True
 STATIC_URL = 'staticfiles/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles')
+]
+STATIC_ROOT = [
+    os.path.join(BASE_DIR, 'staticfiles/')
 ]
 
 MEDIA_URL = '/media/'
