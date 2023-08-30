@@ -82,7 +82,8 @@ DATABASES = {
         'NAME':  'hospital booking',
         'USER': 'postgres',
         'PASSWORD': 'jasmine789',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 # Password validation
